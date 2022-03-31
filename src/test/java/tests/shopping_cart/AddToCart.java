@@ -19,10 +19,10 @@ public class AddToCart extends BaseTest {
         waitSomeSeconds(10);
         loginPage.loginAsUser(testData.getUsername(),testData.getPassword());
         waitSomeSeconds(20);
-        successfullyAddItemToCart();
+        successfullyAddOneItemToCart();
     }
 
-    private void successfullyAddItemToCart(){
+    private void successfullyAddOneItemToCart(){
         homePage.addOneItemToCart();
         Assert.assertEquals(homePage.getAvailableNoItemsInCart(),"1");
     }
